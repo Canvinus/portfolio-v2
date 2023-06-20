@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  portfolio-next:
+    container_name: portfolio-next
+    build:
+      context: next
+    restart: always
+    ports:
+      - "127.0.0.1:${NEXT_PORT}:${NEXT_PORT}"
+    networks:
+      - nwk
+    environment:
+      - NEXT_PORT=${NEXT_PORT}
+  portfolio-nginx:
+    image: nginx:latest
+    container_name: portfolio-nginx
+    restart: always
+    ports:
+      - '127.0.0.1:${NGINX_PORT}:${NGINX_PORT}'
+    networks:
+      - nwk
+    volumes:
+      - ./nginx/:/etc/nginx/templates/
+    environment:
+      - NGINX_PORT=${NGINX_PORT}
+      - NEXT_PORT=${NEXT_PORT}
+
+networks:
+  nwk:
+    driver: bridge
