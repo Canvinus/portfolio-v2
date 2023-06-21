@@ -24,10 +24,21 @@ export default function Home() {
     !isOpen && setClosed(true)
   }
 
-  const [selected, setSelected] = useState<string | null>(null)
-  const handleVisibilityChanged = (section: string) => {
-    setSelected(section)
-    console.log(section)
+  const [selected, setSelected] = useState<
+    { section: string; visible: boolean }[] | null
+  >([
+    { section: 'me', visible: false },
+    { section: 'projects', visible: false },
+  ])
+  const handleVisibilityChanged = (section: string, visible: boolean) => {
+    const updated = selected?.map((item) => {
+      if (item.section === section) {
+        return { ...item, visible: visible }
+      } else {
+        return item
+      }
+    })
+    updated && setSelected(updated)
   }
 
   return (
@@ -41,7 +52,12 @@ export default function Home() {
         justify={'center'}
         spacing={'0'}
       >
-        <Navbar onToggle={onToggle} selected={selected} />
+        <Navbar
+          onToggle={onToggle}
+          selected={
+            selected?.findLast((item) => item.visible === true)?.section
+          }
+        />
         <Flex
           h={{ md: '100vh', base: '80vh' }}
           w={'100vw'}

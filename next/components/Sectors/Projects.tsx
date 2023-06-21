@@ -9,13 +9,12 @@ import TitledSection from '../Text/TitledSection'
 import Title from '../Text/Title'
 
 export default function Projects(props: {
-  onVisibilityChanged: (section: string) => void
+  onVisibilityChanged: (section: string, visible: boolean) => void
 }) {
   const { ref, inView } = useInView()
 
   useEffect(() => {
-    inView && props.onVisibilityChanged('projects')
-    !inView && props.onVisibilityChanged('me')
+    props.onVisibilityChanged('projects', inView)
   }, [inView])
 
   return (

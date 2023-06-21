@@ -17,13 +17,12 @@ import TextContainer from '../Text/TextContainer'
 import TitledSection from '../Text/TitledSection'
 
 export default function Me(props: {
-  onVisibilityChanged: (section: string) => void
+  onVisibilityChanged: (section: string, visible: boolean) => void
 }) {
   const { ref, inView } = useInView()
 
   useEffect(() => {
-    inView && props.onVisibilityChanged('me')
-    !inView && props.onVisibilityChanged('projects')
+    props.onVisibilityChanged('me', inView)
   }, [inView])
 
   return (
