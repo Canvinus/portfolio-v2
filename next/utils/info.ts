@@ -24,4 +24,91 @@ const me = {
   },
 }
 
-export { me }
+const projects = [
+  {
+    title: 'Warp Drive',
+    description:
+      'Embark on a thrilling, cross-chain odyssey that pushes the boundaries of blockchain gaming and showcases the might of the Axelar Network! Prepare to wage war across four distinct blockchains, engaging in relentless combat for power and control in a game that is equal parts immersive, secure, and exhilarating. In this epochal struggle, only one chain shall reign supreme.',
+    stack:
+      'axelar, moralis, node.js (express), React, Next.js, rainbowkit, wagmi, ethers.js, docker, nginx, hardhar, foundry',
+    links: [
+      {
+        title: 'Project Page',
+        href: 'https://twitter.com/easya_app/status/1642623297052618752?s=46&t=wWGh6aBdBOA2phlNMj_ZFQ',
+      },
+      {
+        title: 'MVP',
+        href: 'https://wdrive.io',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/warp-drive',
+      },
+    ],
+  },
+  {
+    title: 'MONKEY BUSINESS',
+    description:
+      'The Infinite Monkey Theorem is a fascinating and thought-provoking concept in the realm of mathematics and probability theory. It posits that if a monkey were to randomly hit keys on a typewriter for an infinite amount of time, it would eventually produce a complete and perfect piece of literature, such as the works of Shakespeare. While the idea may seem far-fetched, it highlights the power of probability and the potential for rare events to occur given enough time.',
+    stack: 'React, Next, tailwindcss, rainbowkit',
+    links: [
+      {
+        title: 'MVP',
+        href: 'https://agruz.dev/monkey-business',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/monkey-business',
+      },
+    ],
+  },
+  {
+    title: 'CRYPTOLIO',
+    description: `Display information about any Externally Owned Account on Ethereum Mainnet. It displays every ERC-20 token on an animated canvas, pie-chart of account's ERC-20 portfolio, also the total ETH balance and ERC-20 tokens balance. Use the Search Bar to lookup for any EOA on the eth network or connect your metamask wallet.`,
+    stack: 'node.js (express), React, ethers.js, moralis',
+    links: [
+      {
+        title: 'MVP',
+        href: 'https://agruz.dev/cryptolio',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/cryptolio',
+      },
+    ],
+  },
+  {
+    title: 'MULTI-USER CHAT',
+    description: `Introducing a versatile chat subsystem designed to seamlessly integrate with various Jitsi-Meet projects. This powerful tool enhances the collaborative experience by enabling smooth communication and instant messaging capabilities within the Jitsi-Meet ecosystem. With its user-friendly interface and robust functionality, the chat subsystem is the perfect addition to any Jitsi-Meet implementation.`,
+    stack:
+      'ASP.NET Core, SignalR, Entity Framework, Oracle DB, swagger, OAuth 2.0',
+    links: [
+      {
+        title: 'MVP',
+        href: 'https://muchat.infostrategic.com/web',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/muchat',
+      },
+    ],
+  },
+  {
+    title: 'LIVE ATTENDANCE MONITORING SERVICE',
+    description: `Introducing a cutting-edge monitoring service that utilizes powerful machine learning algorithms to ensure that only authentic individuals are present in your online meetings. With our app, you can effortlessly schedule or join meetings with ease. Our app also comes equipped with advanced moderator features that allow for seamless user moderation, real-time monitoring, and comprehensive report generation at the end of each meeting. You can trust our service to provide you with a secure and reliable online meeting experience.`,
+    stack:
+      'ASP.NET Core, Entity Framework, flask, selenium web driver, jitsi-meet, Oracle DB, swagger, JWT Auth',
+    links: [
+      {
+        title: 'MVP',
+        href: 'https://smartconf.infostrategic.com/web',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/smartconf',
+      },
+    ],
+  },
+]
+
+export { me, projects }

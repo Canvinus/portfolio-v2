@@ -42,19 +42,19 @@ export default function Me() {
         <Text>{me.education}</Text>
       </TitledSection>
       <TitledSection title={'Skills'} spacing={'7'}>
-        <TitledSection title={'Langs'} titleSize={'lg'}>
+        <TitledSection title={'Langs'} titleSize={'md'}>
           <Text>{me.skills.langs}</Text>
         </TitledSection>
-        <TitledSection title={'Back-end stack'} titleSize={'lg'}>
+        <TitledSection title={'Back-end stack'} titleSize={'md'}>
           <Text>{me.skills.back}</Text>
         </TitledSection>
-        <TitledSection title={'Front-end stack'} titleSize={'lg'}>
+        <TitledSection title={'Front-end stack'} titleSize={'md'}>
           <Text>{me.skills.front}</Text>
         </TitledSection>
-        <TitledSection title={'Worked with'} titleSize={'lg'}>
+        <TitledSection title={'Worked with'} titleSize={'md'}>
           <Text>{me.skills.chains}</Text>
         </TitledSection>
-        <TitledSection title={'Other'} titleSize={'lg'}>
+        <TitledSection title={'Other'} titleSize={'md'}>
           <Text>{me.skills.other}</Text>
         </TitledSection>
       </TitledSection>

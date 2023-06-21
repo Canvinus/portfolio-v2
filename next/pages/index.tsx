@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react'
 import Navbar from '@/components/Layout/Navbar/Navbar'
 import PageHead from '@/components/Common/PageHead'
 import Me from '@/components/Sectors/Me'
+import Projects from '@/components/Sectors/Projects'
 
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure()
@@ -57,6 +58,7 @@ export default function Home() {
               w={'100%'}
             >
               <Me />
+              <Projects />
             </Stack>
           </ScaleFade>
         </Flex>
