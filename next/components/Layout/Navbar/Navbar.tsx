@@ -15,7 +15,6 @@ export default function Navbar(props: {
 
   const handleSelect = (e: any) => {
     if (selected?.toUpperCase() === e.target.innerText?.toUpperCase()) {
-      console.log('here')
       setSelected(null)
       props.onToggle()
       return

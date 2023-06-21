@@ -24,29 +24,20 @@ export default function Home() {
     !isOpen && setClosed(true)
   }
 
-  const [sections, setSections] = useState<
-    { section: string; visible: boolean }[]
-  >([
-    { section: 'me', visible: false },
-    { section: 'projects', visible: false },
-  ])
-
+  const [sections, setSections] = useState({ me: false, projects: false })
   const handleVisibilityChanged = (section: string, visible: boolean) => {
-    const updated = sections?.map((item) => {
-      if (item.section === section) {
-        return { ...item, visible: visible }
-      } else {
-        return item
-      }
-    })
-    updated && setSections(updated)
+    console.log(section, visible)
+    if (section === 'me') {
+      setSections((sections) => ({ ...sections, me: visible }))
+    }
+    if (section === 'projects') {
+      setSections((sections) => ({ ...sections, projects: visible }))
+    }
   }
 
   const [selected, setSelected] = useState<string | null>(null)
   useEffect(() => {
-    setSelected(
-      sections.findLast((item) => item.visible === true)?.section as string
-    )
+    setSelected(sections.me ? 'me' : sections.projects ? 'projects' : null)
   }, [sections])
 
   return (
@@ -82,6 +73,8 @@ export default function Home() {
               overflowY={'auto'}
               h={'100%'}
               w={'100%'}
+              spacing={10}
+              p={4}
             >
               <Me onVisibilityChanged={handleVisibilityChanged} />
               <Projects onVisibilityChanged={handleVisibilityChanged} />

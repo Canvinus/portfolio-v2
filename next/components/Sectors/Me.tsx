@@ -1,11 +1,11 @@
 import {
   UnorderedList,
   ListItem,
-  List,
+  Image,
   Stack,
   Text,
   HStack,
-  Heading,
+  Box,
 } from '@chakra-ui/react'
 import { CalendarIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
@@ -26,8 +26,11 @@ export default function Me(props: {
   }, [inView])
 
   return (
-    <Stack id={'me'} p={4} spacing={10} ref={ref}>
-      <Title>Andrey Gruzdev</Title>
+    <Stack id={'me'} spacing={10} ref={ref}>
+      <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
+        <Title>Andrey Gruzdev</Title>
+        <Image src={me.image} alt={'me'} rounded={'lg'} />
+      </Stack>
       <TitledSection title={'Summary'}>
         <TextContainer>
           {me.summary.map((item, i) => (

@@ -1,4 +1,6 @@
 const me = {
+  image:
+    'https://bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge.ipfs.w3s.link/finish_andre.jpeg',
   summary: [
     `With my extensive experience as a full-stack developer and expertise in DevOps, I possess a wealth of knowledge in various software design patterns. I excel in back-end technologies, specifically ASP .NET Core, Nest.js, Express.js, and TypeScript, which enable me to create high-performing and efficient applications. My love for containerization fuels my passion for development, as I believe it helps to improve development speed and efficiency. Furthermore, my in-depth understanding of RDBSM, as well as my experience with NoSQL DBs, adds to my versatility as a developer.`,
     `On the front-end side, I am skilled in React and Next.js, both of which are essential for building responsive and engaging user interfaces. My extensive experience working with different web3 frameworks has provided me with a deep understanding of blockchain technology and its applications.`,
@@ -43,6 +45,27 @@ const projects = [
       {
         title: 'Github',
         href: 'https://github.com/Canvinus/warp-drive',
+      },
+    ],
+  },
+  {
+    title: 'TIMEPACT',
+    description:
+      'TimePact allows users to create secure time capsules containing specific data, with an expiration date, that can be unlocked using special NFTs. These NFTs can be easily transferred between accounts and bridged to other blockchains.',
+    stack:
+      'node.js (express), React, Next.js, rainbowkit, wagmi, ethers.js, FEVM, IPFS, docker, nginx, hardhat, foundry',
+    links: [
+      {
+        title: 'Project Page',
+        href: 'https://ethglobal.com/showcase/timepact-1mof1',
+      },
+      {
+        title: 'MVP',
+        href: 'https://timepact.xyz',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/Canvinus/TimePact',
       },
     ],
   },
@@ -111,4 +134,15 @@ const projects = [
   },
 ]
 
-export { me, projects }
+const socials = [
+  { label: 'Github', href: 'https://github.com/canvinus' },
+  { label: '2bb', href: 'https://2bb.dev' },
+  { label: 'twitter', href: 'https://twitter.com/Canvinus' },
+  { label: 'telegram', href: 'https://t.me/canvi' },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/andrey-gruzdev-4643a9236',
+  },
+]
+
+export { me, projects, socials }

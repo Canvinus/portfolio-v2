@@ -18,7 +18,7 @@ export default function Projects(props: {
   }, [inView])
 
   return (
-    <Stack id={'projects'} p={4} spacing={10} ref={ref}>
+    <Stack id={'projects'} spacing={10} ref={ref}>
       <Title>Projects</Title>
       {projects.map((item, i) => (
         <TitledSection key={i} title={item.title} spacing={'7'}>
