@@ -15,6 +15,7 @@ export default function Projects(props: {
 
   useEffect(() => {
     inView && props.onVisibilityChanged('projects')
+    !inView && props.onVisibilityChanged('me')
   }, [inView])
 
   return (

@@ -23,6 +23,7 @@ export default function Me(props: {
 
   useEffect(() => {
     inView && props.onVisibilityChanged('me')
+    !inView && props.onVisibilityChanged('projects')
   }, [inView])
 
   return (
