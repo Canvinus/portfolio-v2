@@ -1,14 +1,24 @@
 import { Text, Stack, HStack, Flex } from '@chakra-ui/react'
 import { projects } from '@/utils/info'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 import NextLink from 'next/link'
 import TitledSection from '../Text/TitledSection'
 import Title from '../Text/Title'
 
-export default function Projects() {
+export default function Projects(props: {
+  onVisibilityChanged: (section: string) => void
+}) {
+  const { ref, inView } = useInView()
+
+  useEffect(() => {
+    inView && props.onVisibilityChanged('projects')
+  }, [inView])
+
   return (
-    <Stack id={'projects'} p={4} spacing={10}>
+    <Stack id={'projects'} p={4} spacing={10} ref={ref}>
       <Title>Projects</Title>
       {projects.map((item, i) => (
         <TitledSection key={i} title={item.title} spacing={'7'}>

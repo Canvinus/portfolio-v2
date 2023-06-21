@@ -9,14 +9,24 @@ import {
 } from '@chakra-ui/react'
 import { CalendarIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 import Title from '../Text/Title'
 import TextContainer from '../Text/TextContainer'
 import TitledSection from '../Text/TitledSection'
 
-export default function Me() {
+export default function Me(props: {
+  onVisibilityChanged: (section: string) => void
+}) {
+  const { ref, inView } = useInView()
+
+  useEffect(() => {
+    inView && props.onVisibilityChanged('me')
+  }, [inView])
+
   return (
-    <Stack id={'me'} p={4} spacing={10}>
+    <Stack id={'me'} p={4} spacing={10} ref={ref}>
       <Title>Andrey Gruzdev</Title>
       <TitledSection title={'Summary'}>
         <TextContainer>

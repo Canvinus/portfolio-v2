@@ -24,6 +24,12 @@ export default function Home() {
     !isOpen && setClosed(true)
   }
 
+  const [selected, setSelected] = useState<string | null>(null)
+  const handleVisibilityChanged = (section: string) => {
+    setSelected(section)
+    console.log(section)
+  }
+
   return (
     <>
       <PageHead title={'Andrey Gruzdev'} />
@@ -35,7 +41,7 @@ export default function Home() {
         justify={'center'}
         spacing={'0'}
       >
-        <Navbar onToggle={onToggle} />
+        <Navbar onToggle={onToggle} selected={selected} />
         <Flex
           h={{ md: '100vh', base: '80vh' }}
           w={'100vw'}
@@ -58,8 +64,8 @@ export default function Home() {
               h={'100%'}
               w={'100%'}
             >
-              <Me />
-              <Projects />
+              <Me onVisibilityChanged={handleVisibilityChanged} />
+              <Projects onVisibilityChanged={handleVisibilityChanged} />
             </Stack>
           </ScaleFade>
         </Flex>
