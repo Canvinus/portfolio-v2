@@ -24,22 +24,30 @@ export default function Home() {
     !isOpen && setClosed(true)
   }
 
-  const [selected, setSelected] = useState<
-    { section: string; visible: boolean }[] | null
+  const [sections, setSections] = useState<
+    { section: string; visible: boolean }[]
   >([
     { section: 'me', visible: false },
     { section: 'projects', visible: false },
   ])
+
   const handleVisibilityChanged = (section: string, visible: boolean) => {
-    const updated = selected?.map((item) => {
+    const updated = sections?.map((item) => {
       if (item.section === section) {
         return { ...item, visible: visible }
       } else {
         return item
       }
     })
-    updated && setSelected(updated)
+    updated && setSections(updated)
   }
+
+  const [selected, setSelected] = useState<string | null>(null)
+  useEffect(() => {
+    setSelected(
+      sections.findLast((item) => item.visible === true)?.section as string
+    )
+  }, [sections])
 
   return (
     <>
@@ -52,12 +60,7 @@ export default function Home() {
         justify={'center'}
         spacing={'0'}
       >
-        <Navbar
-          onToggle={onToggle}
-          selected={
-            selected?.findLast((item) => item.visible === true)?.section
-          }
-        />
+        <Navbar onToggle={onToggle} selected={selected} />
         <Flex
           h={{ md: '100vh', base: '80vh' }}
           w={'100vw'}
