@@ -21,25 +21,24 @@ export default function Navbar(props: { onToggle: () => void }) {
     <Stack
       textTransform={'uppercase'}
       textAlign={'center'}
+      alignItems={'center'}
       zIndex={20}
       w={'100%'}
     >
       {Links.map((link: { label: string; href: string }, i: number) => (
-        <NextLink
-          key={link.label}
-          href={link.href}
-          onClick={(e) => handleSelect(e)}
-        >
-          <Heading
-            _hover={{ fontWeight: 'bold' }}
-            fontWeight={'light'}
-            textDecoration={
-              selected?.endsWith(link.href) ? 'underline' : 'none'
-            }
-          >
-            {link.label}
-          </Heading>
-        </NextLink>
+        <Flex key={i}>
+          <NextLink href={link.href} onClick={(e) => handleSelect(e)}>
+            <Heading
+              _hover={{ fontWeight: 'bold' }}
+              fontWeight={'light'}
+              textDecoration={
+                selected?.endsWith(link.href) ? 'underline' : 'none'
+              }
+            >
+              {link.label}
+            </Heading>
+          </NextLink>
+        </Flex>
       ))}
     </Stack>
   )
