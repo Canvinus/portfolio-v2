@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <PageHead title={'Andrey Gruzdev'} />
       <Stack
-        direction={'row'}
+        direction={{ base: 'row', md: 'column' }}
         w={'100vw'}
         h={'100vh'}
         align={'center'}
@@ -37,11 +37,12 @@ export default function Home() {
       >
         <Navbar onToggle={onToggle} />
         <Flex
-          h={'100vh'}
+          h={'80vh'}
           w={'100vw'}
           display={closed ? 'none' : 'flex'}
           py={20}
-          pr={20}
+          pr={{ base: '5%', md: '0' }}
+          px={{ base: '0', md: '5%' }}
         >
           <ScaleFade
             in={isOpen}
