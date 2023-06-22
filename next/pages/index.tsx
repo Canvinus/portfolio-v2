@@ -44,12 +44,15 @@ export default function Home() {
 
   const [selected, setSelected] = useState<string | null>(null)
   useEffect(() => {
-    const lastVisible = Object.keys(sections).reduce((acc, key) => {
-      if (sections[key]) {
-        return key
-      }
-      return acc
-    }, null)
+    const lastVisible = Object.keys(sections).reduce(
+      (acc: string | null, key: string) => {
+        if (sections[key as keyof typeof sections]) {
+          return key
+        }
+        return acc
+      },
+      null
+    )
     setSelected(lastVisible)
   }, [sections])
 
