@@ -1,7 +1,6 @@
 import {
   UnorderedList,
   ListItem,
-  Image,
   Stack,
   Text,
   HStack,
@@ -12,6 +11,7 @@ import { me } from '@/utils/info'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
+import Image from 'next/image'
 import Title from '../Text/Title'
 import TextContainer from '../Text/TextContainer'
 import TitledSection from '../Text/TitledSection'
@@ -29,7 +29,7 @@ export default function Me(props: {
     <Stack id={'me'} spacing={10} ref={ref}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
-        <Image src={me.image} alt={'me'} rounded={'lg'} />
+        <Image src={me.image} alt={'me'} width={'400'} height={'300'} />
       </Stack>
       <TitledSection title={'Summary'}>
         <TextContainer>
