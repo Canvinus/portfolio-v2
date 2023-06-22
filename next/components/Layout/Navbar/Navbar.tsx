@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Heading, Stack, Flex, Container } from '@chakra-ui/react'
+import { Heading, Stack, Flex } from '@chakra-ui/react'
 import { Links } from '@/utils/links'
 
 import NextLink from 'next/link'
@@ -32,6 +32,7 @@ export default function Navbar(props: {
       zIndex={20}
       w={'100%'}
       userSelect={'none'}
+      display={selected ? { base: 'none', md: 'flex' } : 'flex'}
     >
       {Links.map((link: { label: string; href: string }, i: number) => (
         <Flex key={i}>

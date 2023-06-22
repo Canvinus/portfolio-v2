@@ -69,14 +69,14 @@ export default function Home() {
       <Stack
         direction={{ md: 'row', base: 'column' }}
         w={'100vw'}
-        h={'100vh'}
+        h={{ md: '100vh', base: '90vh' }}
         align={'center'}
         justify={'center'}
         spacing={'0'}
       >
         <Navbar onToggle={onToggle} selected={selected} />
         <Flex
-          h={{ md: '100vh', base: '70vh' }}
+          h={'100vh'}
           w={'100vw'}
           display={closed ? 'none' : 'flex'}
           py={20}
@@ -90,6 +90,7 @@ export default function Home() {
             onAnimationComplete={handleAnimationEnd}
           >
             <Stack
+              mt={{ base: '10', md: '0' }}
               borderWidth={'1px'}
               borderColor={'white'}
               borderStyle={'none'}
