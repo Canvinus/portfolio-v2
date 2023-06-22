@@ -37,7 +37,7 @@ export default function Navbar(props: {
           <NextLink href={link.href}>
             <Heading
               onClick={(e) => handleSelect(e)}
-              _hover={{ fontWeight: 'bold' }}
+              _hover={{ md: { fontWeight: 'bold' }, base: 'none' }}
               fontWeight={'light'}
               textDecoration={
                 selected?.toUpperCase() === link.label?.toUpperCase()

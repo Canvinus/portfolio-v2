@@ -1,11 +1,4 @@
-import {
-  UnorderedList,
-  ListItem,
-  Stack,
-  Text,
-  HStack,
-  Box,
-} from '@chakra-ui/react'
+import { UnorderedList, ListItem, Stack, Text, HStack } from '@chakra-ui/react'
 import { CalendarIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
 import { useInView } from 'react-intersection-observer'
@@ -31,14 +24,14 @@ export default function Me(props: {
         <Title>Andrey Gruzdev</Title>
         <Image src={me.image} alt={'me'} width={'400'} height={'300'} />
       </Stack>
-      <TitledSection title={'Summary'}>
+      <TitledSection title={'Summary'} hasBorder={true}>
         <TextContainer>
           {me.summary.map((item, i) => (
             <Text key={i}>{item}</Text>
           ))}
         </TextContainer>
       </TitledSection>
-      <TitledSection title={'Work Experience'}>
+      <TitledSection title={'Work Experience'} hasBorder={true}>
         <UnorderedList spacing={2}>
           {me.workExperience.map((item, i) => (
             <ListItem key={i}>
@@ -51,10 +44,10 @@ export default function Me(props: {
           ))}
         </UnorderedList>
       </TitledSection>
-      <TitledSection title={'Education'}>
+      <TitledSection title={'Education'} hasBorder={true}>
         <Text>{me.education}</Text>
       </TitledSection>
-      <TitledSection title={'Skills'} spacing={'7'}>
+      <TitledSection title={'Skills'} spacing={'7'} hasBorder={true}>
         <TitledSection title={'Langs'} titleSize={'md'}>
           <Text>{me.skills.langs}</Text>
         </TitledSection>

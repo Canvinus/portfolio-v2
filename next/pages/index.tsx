@@ -68,8 +68,8 @@ export default function Home() {
             <Stack
               borderWidth={'1px'}
               borderColor={'white'}
-              borderStyle={'dotted'}
-              rounded={'md'}
+              borderStyle={'none'}
+              rounded={'lg'}
               overflowY={'auto'}
               h={'100%'}
               w={'100%'}

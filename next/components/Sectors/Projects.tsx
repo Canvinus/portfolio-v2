@@ -21,8 +21,17 @@ export default function Projects(props: {
     <Stack id={'projects'} spacing={10} ref={ref}>
       <Title>Projects</Title>
       {projects.map((item, i) => (
-        <TitledSection key={i} title={item.title} spacing={'7'}>
-          <TitledSection title={'Description'} titleSize={'md'}>
+        <TitledSection
+          key={i}
+          title={item.title}
+          spacing={'7'}
+          hasBorder={true}
+        >
+          <TitledSection
+            title={'Description'}
+            titleSize={'md'}
+            display={item.description ? 'flex' : 'none'}
+          >
             <Text>{item.description}</Text>
           </TitledSection>
           <TitledSection title={'Used Stack'} titleSize={'md'}>

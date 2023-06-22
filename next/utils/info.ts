@@ -28,11 +28,43 @@ const me = {
 
 const projects = [
   {
+    title: 'Portfolio',
+    stack: 'Next, React, chakra',
+    links: [
+      {
+        title: 'Site',
+        href: 'https://agruz.dev',
+      },
+    ],
+  },
+  {
+    title: '2BB Portfolio',
+    stack: 'Next, React, chakra',
+    links: [
+      {
+        title: 'Site',
+        href: 'https://2bb.dev',
+      },
+    ],
+  },
+  {
+    title: 'Enode',
+    description:
+      'Enode is an universal encryption node for IPFS that can be used for securing private data on any public blockchain. Enode v1.1 is an improved version of original Enode that was created during ETHGlobal 2023 Scaling Ethereum. This version became more secure by using sign in with ethereum to ensure that data will not be exposed to the third party. Also, supports both encryption of files and json data.',
+    stack: 'Next, React, chakra, thirdweb, nestjs, ipfs, docker, nginx',
+    links: [
+      {
+        title: 'MVP',
+        href: 'https://enode.2bb.dev',
+      },
+    ],
+  },
+  {
     title: 'Warp Drive',
     description:
       'Embark on a thrilling, cross-chain odyssey that pushes the boundaries of blockchain gaming and showcases the might of the Axelar Network! Prepare to wage war across four distinct blockchains, engaging in relentless combat for power and control in a game that is equal parts immersive, secure, and exhilarating. In this epochal struggle, only one chain shall reign supreme.',
     stack:
-      'axelar, moralis, node.js (express), React, Next.js, rainbowkit, wagmi, ethers.js, docker, nginx, hardhar, foundry',
+      'axelar, moralis, express, React, Next, rainbowkit, wagmi, ethers.js, docker, nginx, hardhar, foundry, docker, nginx',
     links: [
       {
         title: 'Project Page',
@@ -49,11 +81,11 @@ const projects = [
     ],
   },
   {
-    title: 'TIMEPACT',
+    title: 'TimePact',
     description:
       'TimePact allows users to create secure time capsules containing specific data, with an expiration date, that can be unlocked using special NFTs. These NFTs can be easily transferred between accounts and bridged to other blockchains.',
     stack:
-      'node.js (express), React, Next.js, rainbowkit, wagmi, ethers.js, FEVM, IPFS, docker, nginx, hardhat, foundry',
+      'express, React, Next, rainbowkit, wagmi, ethers.js, FEVM, IPFS, docker, nginx, hardhat, foundry, docker, nginx',
     links: [
       {
         title: 'Project Page',
@@ -76,7 +108,7 @@ const projects = [
     stack: 'React, Next, tailwindcss, rainbowkit',
     links: [
       {
-        title: 'MVP',
+        title: 'Site',
         href: 'https://agruz.dev/monkey-business',
       },
       {
@@ -102,7 +134,6 @@ const projects = [
   },
   {
     title: 'MULTI-USER CHAT',
-    description: `Introducing a versatile chat subsystem designed to seamlessly integrate with various Jitsi-Meet projects. This powerful tool enhances the collaborative experience by enabling smooth communication and instant messaging capabilities within the Jitsi-Meet ecosystem. With its user-friendly interface and robust functionality, the chat subsystem is the perfect addition to any Jitsi-Meet implementation.`,
     stack:
       'ASP.NET Core, SignalR, Entity Framework, Oracle DB, swagger, OAuth 2.0',
     links: [
@@ -118,7 +149,6 @@ const projects = [
   },
   {
     title: 'LIVE ATTENDANCE MONITORING SERVICE',
-    description: `Introducing a cutting-edge monitoring service that utilizes powerful machine learning algorithms to ensure that only authentic individuals are present in your online meetings. With our app, you can effortlessly schedule or join meetings with ease. Our app also comes equipped with advanced moderator features that allow for seamless user moderation, real-time monitoring, and comprehensive report generation at the end of each meeting. You can trust our service to provide you with a secure and reliable online meeting experience.`,
     stack:
       'ASP.NET Core, Entity Framework, flask, selenium web driver, jitsi-meet, Oracle DB, swagger, JWT Auth',
     links: [
