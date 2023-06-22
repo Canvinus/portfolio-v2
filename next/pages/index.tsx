@@ -12,6 +12,7 @@ import Navbar from '@/components/Layout/Navbar/Navbar'
 import PageHead from '@/components/Common/PageHead'
 import Me from '@/components/Sectors/Me'
 import Projects from '@/components/Sectors/Projects'
+import Hacks from '@/components/Sectors/Hacks'
 
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure()
@@ -24,20 +25,32 @@ export default function Home() {
     !isOpen && setClosed(true)
   }
 
-  const [sections, setSections] = useState({ me: false, projects: false })
+  const [sections, setSections] = useState({
+    me: false,
+    projects: false,
+    hacks: false,
+  })
   const handleVisibilityChanged = (section: string, visible: boolean) => {
-    console.log(section, visible)
     if (section === 'me') {
       setSections((sections) => ({ ...sections, me: visible }))
     }
     if (section === 'projects') {
       setSections((sections) => ({ ...sections, projects: visible }))
     }
+    if (section === 'hacks') {
+      setSections((sections) => ({ ...sections, hacks: visible }))
+    }
   }
 
   const [selected, setSelected] = useState<string | null>(null)
   useEffect(() => {
-    setSelected(sections.me ? 'me' : sections.projects ? 'projects' : null)
+    const lastVisible = Object.keys(sections).reduce((acc, key) => {
+      if (sections[key]) {
+        return key
+      }
+      return acc
+    }, null)
+    setSelected(lastVisible)
   }, [sections])
 
   return (
@@ -53,7 +66,7 @@ export default function Home() {
       >
         <Navbar onToggle={onToggle} selected={selected} />
         <Flex
-          h={{ md: '100vh', base: '80vh' }}
+          h={{ md: '100vh', base: '70vh' }}
           w={'100vw'}
           display={closed ? 'none' : 'flex'}
           py={20}
@@ -78,6 +91,7 @@ export default function Home() {
             >
               <Me onVisibilityChanged={handleVisibilityChanged} />
               <Projects onVisibilityChanged={handleVisibilityChanged} />
+              <Hacks onVisibilityChanged={handleVisibilityChanged} />
             </Stack>
           </ScaleFade>
         </Flex>

@@ -28,26 +28,6 @@ const me = {
 
 const projects = [
   {
-    title: 'Portfolio',
-    stack: 'Next, React, chakra',
-    links: [
-      {
-        title: 'Site',
-        href: 'https://agruz.dev',
-      },
-    ],
-  },
-  {
-    title: '2BB Portfolio',
-    stack: 'Next, React, chakra',
-    links: [
-      {
-        title: 'Site',
-        href: 'https://2bb.dev',
-      },
-    ],
-  },
-  {
     title: 'Enode',
     description:
       'Enode is an universal encryption node for IPFS that can be used for securing private data on any public blockchain. Enode v1.1 is an improved version of original Enode that was created during ETHGlobal 2023 Scaling Ethereum. This version became more secure by using sign in with ethereum to ensure that data will not be exposed to the third party. Also, supports both encryption of files and json data.',
@@ -164,6 +144,12 @@ const projects = [
   },
 ]
 
+const hacks = [
+  {
+    title: 'ETHGlobal 2023',
+  },
+]
+
 const socials = [
   { label: 'Github', href: 'https://github.com/canvinus' },
   { label: '2bb', href: 'https://2bb.dev' },
@@ -175,4 +161,4 @@ const socials = [
   },
 ]
 
-export { me, projects, socials }
+export { me, projects, hacks, socials }

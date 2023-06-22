@@ -6,6 +6,7 @@ interface NavLink {
 const Links = [
   { label: 'Me', href: '/#me' },
   { label: 'Projects', href: '/#projects' },
+  { label: 'Hacks', href: '/#hacks' },
 ]
 
 export { type NavLink, Links }
