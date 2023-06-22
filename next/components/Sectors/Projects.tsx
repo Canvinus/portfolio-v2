@@ -26,15 +26,21 @@ export default function Projects(props: {
           title={item.title}
           spacing={'7'}
           hasBorder={true}
+          hasPb={true}
         >
           <TitledSection
             title={'Description'}
             titleSize={'md'}
-            display={item.description ? 'flex' : 'none'}
+            hasUnderline={true}
+            display={item.description ? 'block' : 'none'}
           >
             <Text>{item.description}</Text>
           </TitledSection>
-          <TitledSection title={'Used Stack'} titleSize={'md'}>
+          <TitledSection
+            title={'Used Stack'}
+            titleSize={'md'}
+            hasUnderline={true}
+          >
             <Text>{item.stack}</Text>
           </TitledSection>
           <Stack spacing={4}>

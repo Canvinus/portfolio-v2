@@ -24,14 +24,24 @@ export default function Me(props: {
         <Title>Andrey Gruzdev</Title>
         <Image src={me.image} alt={'me'} width={'400'} height={'300'} />
       </Stack>
-      <TitledSection title={'Summary'} hasBorder={true}>
+      <TitledSection
+        title={'Summary'}
+        hasBorder={true}
+        isUpperCase={true}
+        hasPb={true}
+      >
         <TextContainer>
           {me.summary.map((item, i) => (
             <Text key={i}>{item}</Text>
           ))}
         </TextContainer>
       </TitledSection>
-      <TitledSection title={'Work Experience'} hasBorder={true}>
+      <TitledSection
+        title={'Work Experience'}
+        hasPb={true}
+        hasBorder={true}
+        isUpperCase={true}
+      >
         <UnorderedList spacing={2}>
           {me.workExperience.map((item, i) => (
             <ListItem key={i}>
@@ -44,23 +54,34 @@ export default function Me(props: {
           ))}
         </UnorderedList>
       </TitledSection>
-      <TitledSection title={'Education'} hasBorder={true}>
+      <TitledSection
+        title={'Education'}
+        hasBorder={true}
+        isUpperCase={true}
+        hasPb={true}
+      >
         <Text>{me.education}</Text>
       </TitledSection>
-      <TitledSection title={'Skills'} spacing={'7'} hasBorder={true}>
-        <TitledSection title={'Langs'} titleSize={'md'}>
+      <TitledSection
+        title={'Skills'}
+        spacing={'7'}
+        hasBorder={true}
+        isUpperCase={true}
+        hasPb={true}
+      >
+        <TitledSection title={'Langs'} titleSize={'lg'}>
           <Text>{me.skills.langs}</Text>
         </TitledSection>
-        <TitledSection title={'Back-end stack'} titleSize={'md'}>
+        <TitledSection title={'Back-end stack'} titleSize={'lg'}>
           <Text>{me.skills.back}</Text>
         </TitledSection>
-        <TitledSection title={'Front-end stack'} titleSize={'md'}>
+        <TitledSection title={'Front-end stack'} titleSize={'lg'}>
           <Text>{me.skills.front}</Text>
         </TitledSection>
-        <TitledSection title={'Worked with'} titleSize={'md'}>
+        <TitledSection title={'Worked with'} titleSize={'lg'}>
           <Text>{me.skills.chains}</Text>
         </TitledSection>
-        <TitledSection title={'Other'} titleSize={'md'}>
+        <TitledSection title={'Other'} titleSize={'lg'}>
           <Text>{me.skills.other}</Text>
         </TitledSection>
       </TitledSection>
