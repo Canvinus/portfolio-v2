@@ -29,7 +29,7 @@ export default function Hacks(props: {
           hasBorder={true}
         >
           <Text fontSize={'lg'}>{hack.date}</Text>
-          <TitledSection title={hack.project} hasPb={true}>
+          <TitledSection title={hack.project} titleSize={'lg'} hasPb={true}>
             {hack.prizes.map((prize, i) => (
               <HStack key={i}>
                 <SmallTitle titleSize={'md'}>
