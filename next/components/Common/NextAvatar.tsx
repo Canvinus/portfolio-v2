@@ -11,6 +11,7 @@ export default function NextAvatar(props: {
   return (
     <Flex display={props.display}>
       <Image
+        draggable={false}
         src={props.src}
         alt={props.alt}
         width={props.size}

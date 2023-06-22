@@ -3,7 +3,7 @@ import { Center, Tooltip } from '@chakra-ui/react'
 
 export default function SocialLogo(props: { url: string; label?: string }) {
   return (
-    <Tooltip label={props.label} rounded={'lg'}>
+    <Tooltip label={props.label} rounded={'lg'} userSelect={'none'}>
       <Center zIndex={20}>
         <SocialIcon
           url={props.url}

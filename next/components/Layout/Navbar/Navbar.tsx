@@ -31,6 +31,7 @@ export default function Navbar(props: {
       alignItems={'center'}
       zIndex={20}
       w={'100%'}
+      userSelect={'none'}
     >
       {Links.map((link: { label: string; href: string }, i: number) => (
         <Flex key={i}>

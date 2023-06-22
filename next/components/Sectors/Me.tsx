@@ -30,7 +30,13 @@ export default function Me(props: {
     <Stack id={'me'} spacing={10} ref={ref} opacity={props.opacity}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
-        <Image src={me.image} alt={'me'} width={'400'} height={'300'} />
+        <Image
+          src={me.image}
+          alt={'me'}
+          width={'400'}
+          height={'300'}
+          draggable={false}
+        />
       </Stack>
       <TitledSection
         title={'Summary'}

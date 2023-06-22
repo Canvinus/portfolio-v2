@@ -5,7 +5,14 @@ import SocialLogo from '../Common/SocialLogo'
 
 export default function Header() {
   return (
-    <Box position={'fixed'} top={'0'} p={2} zIndex={20} w={'full'}>
+    <Box
+      position={'fixed'}
+      top={'0'}
+      p={2}
+      zIndex={20}
+      w={'full'}
+      userSelect={'none'}
+    >
       <HStack align={'center'} justify={'center'} spacing={1}>
         {socials.map((social, i) => (
           <SocialLogo key={i} label={social.label} url={social.href} />
