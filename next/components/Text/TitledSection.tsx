@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Stack, HStack } from '@chakra-ui/react'
+import { Stack, HStack, Flex } from '@chakra-ui/react'
 
 import NextAvatar from '../Common/NextAvatar'
 import SmallTitle from '@/components/Text/SmallTitle'
@@ -34,11 +34,14 @@ export default function TitledSection(props: {
         >
           {props.title}
         </SmallTitle>
-        <NextAvatar
-          src={props.logo}
-          display={props.logo ? 'flex' : 'none'}
-          size={30}
-        />
+        {props.logo && (
+          <NextAvatar
+            src={props.logo}
+            alt={'logo'}
+            display={props.logo ? 'flex' : 'none'}
+            size={30}
+          />
+        )}
       </HStack>
       <Stack spacing={props.spacing}>{props.children}</Stack>
     </Stack>

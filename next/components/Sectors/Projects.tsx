@@ -10,6 +10,7 @@ import Title from '../Text/Title'
 
 export default function Projects(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
+  opacity?: string
 }) {
   const { ref, inView } = useInView()
 
@@ -18,7 +19,7 @@ export default function Projects(props: {
   }, [inView])
 
   return (
-    <Stack id={'projects'} spacing={10} ref={ref}>
+    <Stack id={'projects'} spacing={10} ref={ref} opacity={props.opacity}>
       <Title>Projects</Title>
       {projects.map((item, i) => (
         <TitledSection

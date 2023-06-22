@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 export default function NextAvatar(props: {
   src: string
+  alt: string
   size: number
   display?: string
 }) {
@@ -11,7 +12,7 @@ export default function NextAvatar(props: {
     <Flex display={props.display}>
       <Image
         src={props.src}
-        alt={props.src}
+        alt={props.alt}
         width={props.size}
         height={props.size}
         style={{ borderRadius: '50%' }}

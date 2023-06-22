@@ -1,4 +1,11 @@
-import { UnorderedList, ListItem, Stack, Text, HStack } from '@chakra-ui/react'
+import {
+  UnorderedList,
+  ListItem,
+  Stack,
+  Text,
+  HStack,
+  Flex,
+} from '@chakra-ui/react'
 import { CalendarIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
 import { useInView } from 'react-intersection-observer'
@@ -11,6 +18,7 @@ import TitledSection from '../Text/TitledSection'
 
 export default function Me(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
+  opacity?: string
 }) {
   const { ref, inView } = useInView()
 
@@ -19,7 +27,7 @@ export default function Me(props: {
   }, [inView])
 
   return (
-    <Stack id={'me'} spacing={10} ref={ref}>
+    <Stack id={'me'} spacing={10} ref={ref} opacity={props.opacity}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
         <Image src={me.image} alt={'me'} width={'400'} height={'300'} />

@@ -10,6 +10,7 @@ import NextAvatar from '../Common/NextAvatar'
 
 export default function Hacks(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
+  opacity?: string
 }) {
   const { ref, inView } = useInView()
 
@@ -18,7 +19,7 @@ export default function Hacks(props: {
   }, [inView])
 
   return (
-    <Stack id={'hacks'} spacing={10} ref={ref}>
+    <Stack id={'hacks'} spacing={10} ref={ref} opacity={props.opacity}>
       <Title>Hacks</Title>
       {hacks.map((hack, i) => (
         <TitledSection
@@ -37,7 +38,11 @@ export default function Hacks(props: {
                 </SmallTitle>
                 <HStack>
                   <SmallTitle titleSize={'sm'}>{prize.sponsor.name}</SmallTitle>
-                  <NextAvatar src={prize.sponsor.logo} size={30} />
+                  <NextAvatar
+                    src={prize.sponsor.logo}
+                    alt={prize.sponsor.logo}
+                    size={30}
+                  />
                 </HStack>
               </HStack>
             ))}

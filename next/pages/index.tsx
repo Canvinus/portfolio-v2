@@ -1,6 +1,6 @@
 import {
   Flex,
-  Heading,
+  Skeleton,
   ScaleFade,
   Stack,
   Text,
@@ -17,11 +17,18 @@ import Hacks from '@/components/Sectors/Hacks'
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure()
   const [closed, setClosed] = useState(true)
+
   useEffect(() => {
     isOpen && setClosed(false)
   }, [isOpen])
 
-  const handleClose = () => {
+  const [isAnimating, setIsAnimating] = useState(false)
+  const handleAnimationStart = () => {
+    setIsAnimating(true)
+  }
+
+  const handleAnimationEnd = () => {
+    setIsAnimating(false)
     !isOpen && setClosed(true)
   }
 
@@ -79,7 +86,8 @@ export default function Home() {
           <ScaleFade
             in={isOpen}
             initialScale={0.1}
-            onAnimationComplete={handleClose}
+            onAnimationStart={handleAnimationStart}
+            onAnimationComplete={handleAnimationEnd}
           >
             <Stack
               borderWidth={'1px'}
@@ -92,9 +100,18 @@ export default function Home() {
               spacing={10}
               p={4}
             >
-              <Me onVisibilityChanged={handleVisibilityChanged} />
-              <Projects onVisibilityChanged={handleVisibilityChanged} />
-              <Hacks onVisibilityChanged={handleVisibilityChanged} />
+              <Me
+                onVisibilityChanged={handleVisibilityChanged}
+                opacity={isAnimating ? '0' : '1'}
+              />
+              <Projects
+                onVisibilityChanged={handleVisibilityChanged}
+                opacity={isAnimating ? '0' : '1'}
+              />
+              <Hacks
+                onVisibilityChanged={handleVisibilityChanged}
+                opacity={isAnimating ? '0' : '1'}
+              />
             </Stack>
           </ScaleFade>
         </Flex>
