@@ -1,4 +1,4 @@
-import { Avatar, HStack, Heading, Stack, Text } from '@chakra-ui/react'
+import { HStack, Stack, Text } from '@chakra-ui/react'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
@@ -6,6 +6,7 @@ import Title from '../Text/Title'
 import TitledSection from '../Text/TitledSection'
 import { hacks } from '@/utils/info'
 import SmallTitle from '../Text/SmallTitle'
+import NextAvatar from '../Common/NextAvatar'
 
 export default function Hacks(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
@@ -36,7 +37,7 @@ export default function Hacks(props: {
                 </SmallTitle>
                 <HStack>
                   <SmallTitle titleSize={'sm'}>{prize.sponsor.name}</SmallTitle>
-                  <Avatar src={prize.sponsor.logo} size={'sm'} />
+                  <NextAvatar src={prize.sponsor.logo} size={30} />
                 </HStack>
               </HStack>
             ))}
