@@ -28,18 +28,20 @@ export default function TitledSection(props: {
       p={props.hasBorder ? 2 : 0}
     >
       <Stack
-        spacing={3}
+        spacing={0}
         alignItems={props.align}
         justifyContent={props.justify}
         textAlign={props.align === 'center' ? 'center' : 'left'}
       >
         {props.logo && (
-          <NextAvatar
-            src={props.logo}
-            alt={'logo'}
-            display={props.logo ? 'flex' : 'none'}
-            size={30}
-          />
+          <Flex py={3}>
+            <NextAvatar
+              src={props.logo}
+              alt={'logo'}
+              display={props.logo ? 'flex' : 'none'}
+              size={40}
+            />
+          </Flex>
         )}
         <SmallTitle
           titleSize={props.titleSize}

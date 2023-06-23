@@ -69,6 +69,7 @@ export default function Hacks(props: {
               </UnorderedList>
             </Flex>
           </TitledSection>
+          <Flex pb={2} />
         </TitledSection>
       ))}
     </Stack>
