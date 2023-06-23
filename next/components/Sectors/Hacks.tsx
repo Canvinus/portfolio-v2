@@ -1,10 +1,17 @@
-import { HStack, Stack, Text } from '@chakra-ui/react'
+import {
+  HStack,
+  Stack,
+  Text,
+  UnorderedList,
+  ListItem,
+  Flex,
+} from '@chakra-ui/react'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
+import { hacks } from '@/utils/info'
 
 import Title from '../Text/Title'
 import TitledSection from '../Text/TitledSection'
-import { hacks } from '@/utils/info'
 import SmallTitle from '../Text/SmallTitle'
 import NextAvatar from '../Common/NextAvatar'
 
@@ -27,25 +34,40 @@ export default function Hacks(props: {
           title={hack.name}
           logo={hack.logo}
           hasBorder={true}
+          align={'center'}
+          justify={'center'}
+          hasPb={true}
         >
           <Text fontSize={'lg'}>{hack.date}</Text>
-          <TitledSection title={hack.project} titleSize={'lg'} hasPb={true}>
-            {hack.prizes.map((prize, i) => (
-              <HStack key={i}>
-                <SmallTitle titleSize={'md'}>
-                  {prize.nomination}
-                  {' --- '}
-                </SmallTitle>
-                <HStack>
-                  <SmallTitle titleSize={'sm'}>{prize.sponsor.name}</SmallTitle>
-                  <NextAvatar
-                    src={prize.sponsor.logo}
-                    alt={prize.sponsor.logo}
-                    size={30}
-                  />
-                </HStack>
-              </HStack>
-            ))}
+          <TitledSection
+            title={hack.project}
+            titleSize={'2xl'}
+            hasPb={true}
+            align={'center'}
+            justify={'center'}
+            spacing={'8'}
+          >
+            <Flex>
+              <UnorderedList spacing={2}>
+                {hack.prizes.map((prize, i) => (
+                  <ListItem key={i}>
+                    <SmallTitle titleSize={'md'}>
+                      <HStack>
+                        <Text>{prize.nomination} - </Text>
+                        <HStack>
+                          <Text>{prize.sponsor.name}</Text>
+                          <NextAvatar
+                            src={prize.sponsor.logo}
+                            alt={prize.sponsor.logo}
+                            size={20}
+                          />
+                        </HStack>
+                      </HStack>
+                    </SmallTitle>
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Flex>
           </TitledSection>
         </TitledSection>
       ))}

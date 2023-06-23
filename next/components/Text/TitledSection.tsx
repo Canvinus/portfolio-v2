@@ -15,6 +15,8 @@ export default function TitledSection(props: {
   hasPb?: boolean
   hasUnderline?: boolean
   logo?: string
+  align?: string
+  justify?: string
 }) {
   return (
     <Stack
@@ -25,15 +27,12 @@ export default function TitledSection(props: {
       rounded={'lg'}
       p={props.hasBorder ? 2 : 0}
     >
-      <HStack spacing={3}>
-        <SmallTitle
-          titleSize={props.titleSize}
-          isUppercase={props.isUpperCase}
-          hasPb={props.hasPb}
-          hasUnderline={props.hasUnderline}
-        >
-          {props.title}
-        </SmallTitle>
+      <Stack
+        spacing={3}
+        alignItems={props.align}
+        justifyContent={props.justify}
+        textAlign={props.align === 'center' ? 'center' : 'left'}
+      >
         {props.logo && (
           <NextAvatar
             src={props.logo}
@@ -42,8 +41,22 @@ export default function TitledSection(props: {
             size={30}
           />
         )}
-      </HStack>
-      <Stack spacing={props.spacing}>{props.children}</Stack>
+        <SmallTitle
+          titleSize={props.titleSize}
+          isUppercase={props.isUpperCase}
+          hasPb={props.hasPb}
+          hasUnderline={props.hasUnderline}
+        >
+          {props.title}
+        </SmallTitle>
+      </Stack>
+      <Stack
+        spacing={props.spacing}
+        alignItems={props.align}
+        justifyContent={props.justify}
+      >
+        {props.children}
+      </Stack>
     </Stack>
   )
 }
