@@ -99,7 +99,6 @@ export default function Home() {
               h={'100%'}
               w={'100%'}
               spacing={10}
-              p={4}
             >
               <Me
                 onVisibilityChanged={handleVisibilityChanged}
