@@ -50,7 +50,7 @@ export default function Hacks(props: {
             justify={'center'}
             spacing={'8'}
           >
-            <Flex px={5}>
+            <Flex px={2}>
               <List spacing={2}>
                 {hack.prizes.map((prize, i) => (
                   <ListItem key={i}>
