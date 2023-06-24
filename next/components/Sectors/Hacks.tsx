@@ -2,9 +2,11 @@ import {
   HStack,
   Stack,
   Text,
-  UnorderedList,
+  List,
   ListItem,
   Flex,
+  ListIcon,
+  Box,
 } from '@chakra-ui/react'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
@@ -14,6 +16,7 @@ import Title from '../Text/Title'
 import TitledSection from '../Text/TitledSection'
 import SmallTitle from '../Text/SmallTitle'
 import NextAvatar from '../Common/NextAvatar'
+import TrophyIcon from '../Icons/TrophyIcon'
 
 export default function Hacks(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
@@ -47,26 +50,34 @@ export default function Hacks(props: {
             justify={'center'}
             spacing={'8'}
           >
-            <Flex>
-              <UnorderedList spacing={2}>
+            <Flex px={5}>
+              <List spacing={2}>
                 {hack.prizes.map((prize, i) => (
                   <ListItem key={i}>
-                    <SmallTitle titleSize={'md'}>
-                      <HStack>
-                        <Text>{prize.nomination} - </Text>
+                    <HStack spacing={'2'}>
+                      <Box boxSize={'3'}>
+                        <ListIcon as={TrophyIcon} />
+                      </Box>
+                      <SmallTitle titleSize={'md'}>
                         <HStack>
-                          <Text>{prize.sponsor.name}</Text>
-                          <NextAvatar
-                            src={prize.sponsor.logo}
-                            alt={prize.sponsor.logo}
-                            size={20}
-                          />
+                          <Text isTruncated>
+                            {prize.nomination}
+                            {' - '}
+                          </Text>
+                          <HStack>
+                            <Text>{prize.sponsor.name}</Text>
+                            <NextAvatar
+                              src={prize.sponsor.logo}
+                              alt={prize.sponsor.logo}
+                              size={20}
+                            />
+                          </HStack>
                         </HStack>
-                      </HStack>
-                    </SmallTitle>
+                      </SmallTitle>
+                    </HStack>
                   </ListItem>
                 ))}
-              </UnorderedList>
+              </List>
             </Flex>
           </TitledSection>
           <Flex pb={2} />
