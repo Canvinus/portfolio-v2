@@ -10,7 +10,7 @@ export default function SmallTitle(props: {
   return (
     <Heading
       textDecoration={props.hasUnderline ? 'underline' : 'none'}
-      textUnderlineOffset={'3px'}
+      textUnderlineOffset={'5px'}
       fontSize={props.titleSize || '2xl'}
       textTransform={props.isUppercase ? 'uppercase' : 'initial'}
       pb={props.hasPb ? 3 : 0}
