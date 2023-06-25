@@ -89,7 +89,7 @@ const projects = [
     links: [
       {
         title: 'Site',
-        href: 'https://agruz.dev/monkey-business',
+        href: 'https://monkeybiz.agruz.dev',
       },
       {
         title: 'Github',
