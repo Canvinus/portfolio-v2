@@ -1,9 +1,11 @@
 import { SocialIcon } from 'react-social-icons'
-import { Center, Tooltip } from '@chakra-ui/react'
+import { Center } from '@chakra-ui/react'
 
-export default function SocialLogo(props: { url: string; label?: string }) {
+import DefaultTooltip from './DefaultTooltip'
+
+export default function SocialLogo(props: { url: string; label: string }) {
   return (
-    <Tooltip label={props.label} rounded={'lg'} userSelect={'none'}>
+    <DefaultTooltip label={props.label}>
       <Center zIndex={20}>
         <SocialIcon
           url={props.url}
@@ -12,6 +14,6 @@ export default function SocialLogo(props: { url: string; label?: string }) {
           style={{ width: 26, height: 26 }}
         />
       </Center>
-    </Tooltip>
+    </DefaultTooltip>
   )
 }

@@ -1,20 +1,14 @@
-import {
-  UnorderedList,
-  ListItem,
-  Stack,
-  Text,
-  HStack,
-  Flex,
-} from '@chakra-ui/react'
-import { CalendarIcon } from '@chakra-ui/icons'
+import { UnorderedList, ListItem, Stack, Text, HStack } from '@chakra-ui/react'
+import { CalendarIcon, ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
+import NextLink from 'next/link'
 import Image from 'next/image'
 import Title from '../Text/Title'
-import TextContainer from '../Text/TextContainer'
 import TitledSection from '../Text/TitledSection'
+import DefaultTooltip from '../Common/DefaultTooltip'
 
 export default function Me(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
@@ -44,11 +38,9 @@ export default function Me(props: {
         isUpperCase={true}
         hasPb={true}
       >
-        <TextContainer>
-          {me.summary.map((item, i) => (
-            <Text key={i}>{item}</Text>
-          ))}
-        </TextContainer>
+        {me.summary.map((item, i) => (
+          <Text key={i}>{item}</Text>
+        ))}
       </TitledSection>
       <TitledSection
         title={'Work Experience'}
@@ -99,6 +91,13 @@ export default function Me(props: {
           <Text>{me.skills.other}</Text>
         </TitledSection>
       </TitledSection>
+      <DefaultTooltip label={'Open CV'}>
+        <NextLink href={me.cvLink} target={'_blank'}>
+          <Title>
+            <ExternalLinkIcon />
+          </Title>
+        </NextLink>
+      </DefaultTooltip>
     </Stack>
   )
 }
