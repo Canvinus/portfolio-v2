@@ -90,6 +90,7 @@ export default function Home() {
         align={'center'}
         justify={'center'}
         spacing={'0'}
+        overflow={'hidden'}
       >
         <Navbar onToggle={onToggle} selected={selected} />
         <Flex
