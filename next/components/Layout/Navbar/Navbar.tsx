@@ -36,7 +36,7 @@ export default function Navbar(props: {
     >
       {Links.map((link: { label: string; href: string }, i: number) => (
         <Flex key={i}>
-          <NextLink href={link.href}>
+          <NextLink href={link.href} scroll={false}>
             <Heading
               onClick={(e) => handleSelect(e)}
               _hover={{ md: { fontWeight: 'bold' } }}

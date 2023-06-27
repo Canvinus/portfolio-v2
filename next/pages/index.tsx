@@ -1,12 +1,6 @@
-import {
-  Flex,
-  Skeleton,
-  ScaleFade,
-  Stack,
-  Text,
-  useDisclosure,
-} from '@chakra-ui/react'
+import { Flex, ScaleFade, Stack, useDisclosure } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 import Navbar from '@/components/Layout/Navbar/Navbar'
 import PageHead from '@/components/Common/PageHead'
@@ -17,6 +11,8 @@ import Hacks from '@/components/Sectors/Hacks'
 export default function Home() {
   const { isOpen, onToggle } = useDisclosure()
   const [closed, setClosed] = useState(true)
+
+  const router = useRouter()
 
   useEffect(() => {
     isOpen && setClosed(false)
@@ -63,9 +59,30 @@ export default function Home() {
     setSelected(lastVisible)
   }, [sections])
 
+  useEffect(() => {
+    router.beforePopState(({ as }) => {
+      if (as !== router.asPath) {
+        setClosed(true)
+        router.reload()
+      }
+      return true
+    })
+
+    return () => {
+      router.beforePopState(() => true)
+    }
+  }, [router])
+
+  const [title, setTitle] = useState('Andrey Gruzdev')
+  useEffect(() => {
+    if (!selected || selected === 'me') setTitle('Andrey Gruzdev')
+    else if (selected === 'projects') setTitle('Projects')
+    else if (selected === 'hacks') setTitle('Hacks')
+  }, [selected])
+
   return (
     <>
-      <PageHead title={'Andrey Gruzdev'} />
+      <PageHead title={title} />
       <Stack
         direction={{ md: 'row', base: 'column' }}
         w={'100vw'}
