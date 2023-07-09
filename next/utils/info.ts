@@ -1,6 +1,6 @@
 const me = {
   image:
-    'https://bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge.ipfs.w3s.link/finish_andre.jpeg',
+    'https://ipfs.io/ipfs/bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge/finish_andre.jpeg',
   summary: [
     `I am an experienced full-stack developer with expertise in DevOps and knowledge of various software design patterns. My strength lies in back-end technologies such as ASP .NET Core, Nest.js, and Express.js with TypeScript, as well as my love for containerization. I am well-versed in RDBSM and have experience with NoSQL DBs. On the front-end side, I excel in React and Next.js and have worked with various web3 frameworks. As a team player, I am experienced in Agile methodologies and passionate about blockchain development, with a goal to improve the web3 space for the end-user.`,
   ],
@@ -23,7 +23,7 @@ const me = {
     other: 'ipfs, git, swagger, agile, OAuth 2.0',
   },
   cvLink:
-    'https://bafybeifoplrvdm4tcmtrdwmmykw6uq6nl7eoxojfe7vh32b5hwwmknbd6a.ipfs.w3s.link/CV_JUN_23.pdf',
+    'https://ipfs.io/ipfs/bafybeifoplrvdm4tcmtrdwmmykw6uq6nl7eoxojfe7vh32b5hwwmknbd6a/CV_JUN_23.pdf',
 }
 
 const projects = [
