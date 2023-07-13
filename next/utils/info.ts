@@ -38,7 +38,7 @@ const projects = [
         href: 'https://near.social/#/devgovgigs.near/widget/gigs-board.pages.Post?id=853',
       },
       {
-        title: 'MVP',
+        title: 'SourceScan',
         href: 'https://sourcescan.2bb.dev',
       },
     ],
