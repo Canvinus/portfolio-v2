@@ -28,6 +28,22 @@ const me = {
 
 const projects = [
   {
+    title: 'SourceScan',
+    description: `SourceScan is a platform that verifies and explores smart contract source code on the NEAR blockchain. It uses IPFS for decentralized storage and NEAR's smart contract capabilities to ensure trust and transparency. Key features include WASM code mismatch check, server for reliable code compilation, and a user-friendly explorer for developers. SourceScan promotes reproducibility, security, and understanding of smart contracts on NEAR.`,
+    stack:
+      'Next, React, chakra, NEAR, wallet-selector, nestjs, ipfs, docker, nginx',
+    links: [
+      {
+        title: 'Proposal',
+        href: 'https://near.social/#/devgovgigs.near/widget/gigs-board.pages.Post?id=853',
+      },
+      {
+        title: 'MVP',
+        href: 'https://sourcescan.2bb.dev',
+      },
+    ],
+  },
+  {
     title: 'Enode',
     description:
       'Enode is an universal encryption node for IPFS that can be used for securing private data on any public blockchain. Enode v1.1 is an improved version of original Enode that was created during ETHGlobal 2023 Scaling Ethereum. This version became more secure by using sign in with ethereum to ensure that data will not be exposed to the third party. Also, supports both encryption of files and json data.',
