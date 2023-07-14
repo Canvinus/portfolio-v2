@@ -24,7 +24,7 @@ export default function Me(props: {
     <Stack id={'me'} spacing={10} ref={ref} opacity={props.opacity}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
-        <video autoPlay muted playsInline preload={'auto'} loop>
+        <video autoPlay muted playsInline preload={'none'} loop>
           <source
             src={
               'https://ipfs.io/ipfs/bafybeidhcnamziwlmtehc667joe5n7a2epbcvxoxibcitczfjafmj47gyu/me_final.mp4'
