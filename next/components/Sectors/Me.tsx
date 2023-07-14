@@ -24,13 +24,14 @@ export default function Me(props: {
     <Stack id={'me'} spacing={10} ref={ref} opacity={props.opacity}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
-        <Image
-          src={me.image}
-          alt={'me'}
-          width={'400'}
-          height={'300'}
-          draggable={false}
-        />
+        <video autoPlay muted playsInline preload={'auto'} loop>
+          <source
+            src={
+              'https://ipfs.io/ipfs/bafybeidhcnamziwlmtehc667joe5n7a2epbcvxoxibcitczfjafmj47gyu/me_final.mp4'
+            }
+            type={'video/mp4'}
+          />
+        </video>
       </Stack>
       <TitledSection
         title={'Summary'}
