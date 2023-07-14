@@ -24,10 +24,10 @@ export default function Me(props: {
     <Stack id={'me'} spacing={10} ref={ref} opacity={props.opacity}>
       <Stack alignItems={'center'} justifyContent={'center'} spacing={4}>
         <Title>Andrey Gruzdev</Title>
-        <video autoPlay muted playsInline preload={'none'} loop>
+        <video autoPlay muted playsInline preload={'auto'} loop>
           <source
             src={
-              'https://ipfs.io/ipfs/bafybeidhcnamziwlmtehc667joe5n7a2epbcvxoxibcitczfjafmj47gyu/me_final.mp4'
+              'https://ipfs.io/ipfs/bafybeieir774kiizl3licy73jwufat7gvntuktd3loaq73kdbmp2sb6seq/me_final_compressed.mp4'
             }
             type={'video/mp4'}
           />
