@@ -162,7 +162,7 @@ const projects = [
 
 const hacks = [
   {
-    name: 'ETHGLobal Paris 2023',
+    name: 'ETHGlobal Paris 2023',
     logo: 'https://storage.googleapis.com/ethglobal-api-production/events%2Fzqd1s%2Flogo%2F1683191744558_paris_2023_square_logo.png',
     date: 'July 21 – 23, 2023',
     project: 'SourceScan.BOS',
@@ -192,7 +192,7 @@ const hacks = [
     ],
   },
   {
-    name: 'ETHGLobal Scaling Ethereum 2023',
+    name: 'ETHGlobal Scaling Ethereum 2023',
     logo: 'https://storage.googleapis.com/ethglobal-api-production/events%2Fof2r2%2Flogo%2F1671503482706_scaling-ethereum-square-logo.svg',
     date: '10 - 31 March 2023',
     project: 'TimePact',
