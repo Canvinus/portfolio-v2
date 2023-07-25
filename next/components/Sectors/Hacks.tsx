@@ -51,18 +51,28 @@ export default function Hacks(props: {
             spacing={'8'}
           >
             <Flex>
-              <List spacing={2}>
+              <List spacing={{ md: 2, base: 8 }}>
                 {hack.prizes.map((prize, i) => (
                   <ListItem key={i}>
-                    <HStack spacing={'2'}>
-                      <Box boxSize={'3'}>
+                    <HStack
+                      spacing={'2'}
+                      alignItems={'center'}
+                      justifyContent={{ md: 'start', base: 'center' }}
+                    >
+                      <Box boxSize={'3'} display={{ md: 'flex', base: 'none' }}>
                         <ListIcon as={TrophyIcon} />
                       </Box>
                       <SmallTitle titleSize={'md'}>
-                        <HStack>
-                          <Text isTruncated>
-                            {prize.nomination}
+                        <Stack
+                          direction={{ md: 'row', base: 'column' }}
+                          alignItems={'center'}
+                        >
+                          <Text>{prize.nomination}</Text>
+                          <Text display={{ md: 'flex', base: 'none' }}>
                             {' - '}
+                          </Text>
+                          <Text display={{ md: 'none', base: 'flex' }}>
+                            {'(by)'}
                           </Text>
                           <HStack>
                             <Text>{prize.sponsor.name}</Text>
@@ -72,7 +82,7 @@ export default function Hacks(props: {
                               size={20}
                             />
                           </HStack>
-                        </HStack>
+                        </Stack>
                       </SmallTitle>
                     </HStack>
                   </ListItem>
