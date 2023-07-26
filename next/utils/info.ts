@@ -120,7 +120,7 @@ const projects = [
     links: [
       {
         title: 'MVP',
-        href: 'https://agruz.dev/cryptolio',
+        href: 'https://cryptolio.agruz.dev',
       },
       {
         title: 'Github',
