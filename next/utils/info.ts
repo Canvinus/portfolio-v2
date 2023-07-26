@@ -119,7 +119,7 @@ const projects = [
     stack: 'node.js (express), React, ethers.js, moralis',
     links: [
       {
-        title: 'MVP',
+        title: 'Site',
         href: 'https://cryptolio.agruz.dev',
       },
       {
