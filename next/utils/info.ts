@@ -6,12 +6,12 @@ const me = {
   ],
   workExperience: [
     {
-      location: 'Amkapital - Moscow, Russia',
-      dates: '11/2020 - 07/2021',
-    },
-    {
       location: 'Infostrategic - Dubai, UAE',
       dates: '04/2022 - 09/2022',
+    },
+    {
+      location: 'Amkapital - Moscow, Russia',
+      dates: '11/2020 - 12/2021',
     },
   ],
   education: 'BA of Computer Science - Higher School of Economics',
@@ -23,7 +23,7 @@ const me = {
     other: 'ipfs, git, swagger, agile, OAuth 2.0',
   },
   cvLink:
-    'https://ipfs.io/ipfs/bafybeifoplrvdm4tcmtrdwmmykw6uq6nl7eoxojfe7vh32b5hwwmknbd6a/CV_JUN_23.pdf',
+    'https://ipfs.io/ipfs/bafybeihcl4keu37ggq2f3mvu374nkjbrhbpac67zevlfjpefcwp5wn77xm/CV_JUL_23.pdf',
 }
 
 const projects = [
@@ -222,7 +222,7 @@ const socials = [
   { label: 'telegram', href: 'https://t.me/canvi' },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/andrey-gruzdev-4643a9236',
+    href: 'https://www.linkedin.com/in/canvi',
   },
 ]
 
