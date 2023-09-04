@@ -6,9 +6,10 @@ export default function PageHead(props: { title: string }) {
       <title>{props.title}</title>
       <meta
         property="og:title"
-        content="Andrey Gruzdev - Software Engineer"
+        content="Andrey Gruzdev - Web3 Developer"
         key="title"
       />
+      <meta name={'description'} content={'Andrey Gruzdev - Web3 Developer'} />
     </Head>
   )
 }
