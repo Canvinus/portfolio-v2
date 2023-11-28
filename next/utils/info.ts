@@ -186,7 +186,7 @@ const hacks = [
   },
   {
     name: 'Harvard Blockchain x EasyA Hackathon',
-    logo: 'https://pbs.twimg.com/profile_images/1655494003935019008/aHyxX6iG_400x400.jpg',
+    logo: 'https://ipfs.io/ipfs/bafkreign4u2iurpsdrjehbvsar7fl6ofbb3p4x5r7olswnqpo3se3vsukm',
     date: '31 March - 2 April 2023',
     project: 'Warp Drive',
     prizes: [
