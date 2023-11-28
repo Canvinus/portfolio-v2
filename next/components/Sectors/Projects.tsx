@@ -1,12 +1,12 @@
-import { Text, Stack, HStack, Flex } from '@chakra-ui/react'
 import { projects } from '@/utils/info'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { useInView } from 'react-intersection-observer'
+import { Flex, HStack, Stack, Text } from '@chakra-ui/react'
 import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 import NextLink from 'next/link'
-import TitledSection from '../Text/TitledSection'
 import Title from '../Text/Title'
+import TitledSection from '../Text/TitledSection'
 
 export default function Projects(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void
@@ -29,6 +29,21 @@ export default function Projects(props: {
           hasBorder={true}
           hasPb={true}
         >
+          {item.backers ? (
+            <TitledSection
+              title={'Backers'}
+              titleSize={'md'}
+              hasUnderline={true}
+            >
+              <>
+                {item.backers.map((backer, i) => (
+                  <HStack key={i}>
+                    <Text>{backer.name}</Text>
+                  </HStack>
+                ))}
+              </>
+            </TitledSection>
+          ) : null}
           <TitledSection
             title={'Description'}
             titleSize={'md'}

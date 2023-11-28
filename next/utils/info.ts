@@ -29,17 +29,25 @@ const me = {
 const projects = [
   {
     title: 'SourceScan',
-    description: `SourceScan is a platform that verifies and explores smart contract source code on the NEAR blockchain. It uses IPFS for decentralized storage and NEAR's smart contract capabilities to ensure trust and transparency. Key features include WASM code mismatch check, server for reliable code compilation, and a user-friendly explorer for developers. SourceScan promotes reproducibility, security, and understanding of smart contracts on NEAR.`,
-    stack:
-      'Next, React, chakra, NEAR, wallet-selector, nestjs, ipfs, docker, nginx',
+    description: `SourceScan is a platform designed for the NEAR blockchain ecosystem, offering a robust solution for smart contract source code verification, viewing, and deployment. It addresses challenges related to WebAssembly (WASM), enhancing contract interoperability, security, and transparency. Key features include remote compilation for Rust and TypeScript, GitHub code import, detailed contract lookup, on-chain contract information storage, and advanced key management. SourceScan aims to boost NEAR's ecosystem by facilitating smart contract development, ensuring a more secure environment, and enhancing user adoption. The platform also plans to integrate social features like code viewing with ChatGPT integration, trustworthiness levels, and direct donations, along with decentralized compilation and zk-proof verification to further decentralize and secure the verification process.`,
+    stack: 'Near, BOS, Next, React, chakra, nestjs, ipfs, docker, nginx',
+    backers: [
+      {
+        name: 'NEAR DevHub',
+      },
+    ],
     links: [
       {
         title: 'Proposal',
-        href: 'https://near.social/#/devgovgigs.near/widget/gigs-board.pages.Post?id=853',
+        href: 'https://near.org/devgovgigs.near/widget/gigs-board.pages.Post?id=1565',
       },
       {
         title: 'SourceScan',
-        href: 'https://sourcescan.2bb.dev',
+        href: 'https://sourcescan.dev',
+      },
+      {
+        title: 'BOS',
+        href: 'https://near.org/sourcescan.near/widget/SourceScan',
       },
     ],
   },
@@ -226,4 +234,4 @@ const socials = [
   },
 ]
 
-export { me, projects, hacks, socials }
+export { hacks, me, projects, socials }
