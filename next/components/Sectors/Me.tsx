@@ -1,14 +1,13 @@
-import { UnorderedList, ListItem, Stack, Text, HStack } from '@chakra-ui/react'
-import { CalendarIcon, ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons'
 import { me } from '@/utils/info'
-import { useInView } from 'react-intersection-observer'
+import { CalendarIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { HStack, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react'
 import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 import NextLink from 'next/link'
-import Image from 'next/image'
+import DefaultTooltip from '../Common/DefaultTooltip'
 import Title from '../Text/Title'
 import TitledSection from '../Text/TitledSection'
-import DefaultTooltip from '../Common/DefaultTooltip'
 
 export default function Me(props: {
   onVisibilityChanged: (section: string, visible: boolean) => void

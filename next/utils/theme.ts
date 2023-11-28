@@ -1,11 +1,14 @@
-import { mode, GlobalStyleProps } from '@chakra-ui/theme-tools'
 import { extendTheme } from '@chakra-ui/react'
+import { GlobalStyleProps } from '@chakra-ui/theme-tools'
+
+const color = '#ffffff'
+const bg = '#000000'
 
 const styles = {
   global: (props: GlobalStyleProps) => ({
     body: {
-      color: '#ffffff',
-      bg: '#000000',
+      color: color,
+      bg: bg,
     },
   }),
 }
@@ -21,4 +24,4 @@ const theme = extendTheme({
   useSystemColorMode: true,
 })
 
-export { theme }
+export { bg, color, theme }
