@@ -2,7 +2,7 @@ const me = {
   image:
     'https://ipfs.io/ipfs/bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge/finish_andre.jpeg',
   summary: [
-    `I am a full-stack developer that is building the Web3 space for the better future. My expertise lies in back-end technologies, including NestJs and Express.js. I have a strong foundation in RDBMS and experience with NoSQL databases. On the front-end, I am proficient in React and Next.js and have worked with various Web3 frameworks, notably wagmi and viem. I possess in-depth knowledge of developing on EVM-chains and the NEAR Protocol. My focus has been on enhancing the developer experience on NEAR, evidenced by my founding of SourceScan. This initiative addresses the issue of WASM reproducibility.`,
+    `I am a full-stack developer that is building the Web3 space for the better future. My expertise lies in back-end technologies, including NestJS and Express. I have a strong foundation in RDBMS and experience with NoSQL databases. On the front-end, I am proficient in React and Next.js and have worked with various Web3 frameworks, notably wagmi and viem. I possess in-depth knowledge of developing on EVM-chains and the NEAR Protocol. My focus has been on enhancing the developer experience on NEAR, evidenced by my founding of SourceScan. This initiative addresses the issue of WASM reproducibility.`,
   ],
   workExperience: [
     {
