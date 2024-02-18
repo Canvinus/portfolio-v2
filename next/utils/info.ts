@@ -2,9 +2,13 @@ const me = {
   image:
     'https://ipfs.io/ipfs/bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge/finish_andre.jpeg',
   summary: [
-    `I am an experienced full-stack developer with expertise in DevOps and knowledge of various software design patterns. My strength lies in back-end technologies such as ASP .NET Core, Nest.js, and Express.js with TypeScript, as well as my love for containerization. I am well-versed in RDBSM and have experience with NoSQL DBs. On the front-end side, I excel in React and Next.js and have worked with various web3 frameworks. As a team player, I am experienced in Agile methodologies and passionate about blockchain development, with a goal to improve the web3 space for the end-user.`,
+    `I am a full-stack developer aiming to change the Web3 space for the better future. My expertise lies in back-end technologies, including NestJs and Express.js. I have a strong foundation in RDBMS and experience with NoSQL databases. On the front-end, I am proficient in React and Next.js and have worked with various Web3 frameworks, notably wagmi and viem. I possess in-depth knowledge of developing on EVM-chains and the NEAR Protocol. My focus has been on enhancing the developer experience on NEAR, evidenced by my founding of SourceScan. This initiative addresses the issue of WASM reproducibility.`,
   ],
   workExperience: [
+    {
+      location: '2BeBuilt',
+      dates: '02/2023 - Present',
+    },
     {
       location: 'Infostrategic - Dubai, UAE',
       dates: '04/2022 - 09/2022',
@@ -16,14 +20,12 @@ const me = {
   ],
   education: 'BA of Computer Science - Higher School of Economics',
   skills: {
-    langs: 'TS, JS, C++, C#, Rust, Python, SQL',
-    back: 'Docker, nginx, nest.js, express.js, ASP .NET Core, EF, SignalR, RDBMS, redis, MongoDB',
-    front: 'Next.js, React, chakra, wagmi, rainbowkit, thirdweb, ethers.js',
-    chains: 'evm, filecoin, near',
-    other: 'ipfs, git, swagger, agile, OAuth 2.0',
+    langs: 'JavaScript, TypeScript, Rust, C#, C++, Python, SQL',
+    back: 'Express, NestJS, RDBMS, redis, MongoDB',
+    front: 'Next.js, React, chakra, wagmi, viem',
+    chains: 'EVM, NEAR, Filecoin',
+    other: 'docker, nginx, git, github actions',
   },
-  cvLink:
-    'https://ipfs.io/ipfs/bafybeihcl4keu37ggq2f3mvu374nkjbrhbpac67zevlfjpefcwp5wn77xm/CV_JUL_23.pdf',
 }
 
 const projects = [

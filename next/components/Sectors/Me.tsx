@@ -1,11 +1,9 @@
 import { me } from '@/utils/info'
-import { CalendarIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { CalendarIcon } from '@chakra-ui/icons'
 import { HStack, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import NextLink from 'next/link'
-import DefaultTooltip from '../Common/DefaultTooltip'
 import Title from '../Text/Title'
 import TitledSection from '../Text/TitledSection'
 
@@ -83,13 +81,6 @@ export default function Me(props: {
           <Text>{me.skills.other}</Text>
         </TitledSection>
       </TitledSection>
-      <DefaultTooltip label={'Open CV'}>
-        <NextLink href={me.cvLink} target={'_blank'}>
-          <Title>
-            <ExternalLinkIcon />
-          </Title>
-        </NextLink>
-      </DefaultTooltip>
     </Stack>
   )
 }
