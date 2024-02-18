@@ -68,14 +68,17 @@ export default function Me(props: {
         <TitledSection title={'Langs'} titleSize={'lg'}>
           <Text>{me.skills.langs}</Text>
         </TitledSection>
+        <TitledSection title={'Web3 stack'} titleSize={'lg'}>
+          <Text>{me.skills.web3}</Text>
+        </TitledSection>
+        <TitledSection title={'Chains'} titleSize={'lg'}>
+          <Text>{me.skills.chains}</Text>
+        </TitledSection>
         <TitledSection title={'Back-end stack'} titleSize={'lg'}>
           <Text>{me.skills.back}</Text>
         </TitledSection>
         <TitledSection title={'Front-end stack'} titleSize={'lg'}>
           <Text>{me.skills.front}</Text>
-        </TitledSection>
-        <TitledSection title={'Worked with'} titleSize={'lg'}>
-          <Text>{me.skills.chains}</Text>
         </TitledSection>
         <TitledSection title={'Other'} titleSize={'lg'}>
           <Text>{me.skills.other}</Text>

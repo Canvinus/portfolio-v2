@@ -22,7 +22,8 @@ const me = {
   skills: {
     langs: 'JavaScript, TypeScript, Rust, C#, C++, Python, SQL',
     back: 'Express, NestJS, RDBMS, redis, MongoDB',
-    front: 'Next.js, React, chakra, wagmi, viem',
+    front: 'Next.js, React',
+    web3: 'wagmi, viem, BOS, WASM, near-sdk-rs',
     chains: 'EVM, NEAR, Filecoin',
     other: 'docker, nginx, git, github actions',
   },
