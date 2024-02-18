@@ -31,6 +31,25 @@ const me = {
 
 const projects = [
   {
+    title: 'buildr.build',
+    description: `buildr.build is the directory for everyone passionate about web3. Treat it as accessible to everyone personal advertising platform where you can promote yourself or others, share contact info, and find necessary contacts of other builders.`,
+    stack: 'Next, React, wagmi, viem',
+    links: [
+      {
+        title: 'buildr.build',
+        href: 'https://buildr.build',
+      },
+      {
+        title: 'OpenSea',
+        href: 'https://opensea.io/collection/buildr-build',
+      },
+      {
+        title: 'Twitter',
+        href: 'https://twitter.com/i/communities/1758601184183456077',
+      },
+    ],
+  },
+  {
     title: 'SourceScan',
     description: `SourceScan is a platform designed for the NEAR blockchain ecosystem, offering a robust solution for smart contract source code verification, viewing, and deployment. It addresses challenges related to WebAssembly (WASM), enhancing contract interoperability, security, and transparency. Key features include remote compilation for Rust and TypeScript, GitHub code import, detailed contract lookup, on-chain contract information storage, and advanced key management. SourceScan aims to boost NEAR's ecosystem by facilitating smart contract development, ensuring a more secure environment, and enhancing user adoption. The platform also plans to integrate social features like code viewing with ChatGPT integration, trustworthiness levels, and direct donations, along with decentralized compilation and zk-proof verification to further decentralize and secure the verification process.`,
     stack: 'Near, BOS, Next, React, chakra, nestjs, ipfs, docker, nginx',
@@ -51,6 +70,10 @@ const projects = [
       {
         title: 'BOS',
         href: 'https://near.org/sourcescan.near/widget/SourceScan',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/sourcescan',
       },
     ],
   },
