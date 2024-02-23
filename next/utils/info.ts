@@ -18,7 +18,7 @@ const me = {
       dates: '11/2020 - 12/2021',
     },
   ],
-  education: 'BA of Computer Science - Higher School of Economics',
+  education: 'Bachelor of Computer Science - Higher School of Economics',
   skills: {
     langs: 'JavaScript, TypeScript, Rust, C#, C++, Python, SQL',
     back: 'Express, NestJS, RDBMS, redis, MongoDB',
