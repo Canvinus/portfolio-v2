@@ -252,7 +252,7 @@ const hacks = [
 const socials = [
   { label: 'Github', href: 'https://github.com/canvinus' },
   { label: '2bb', href: 'https://2bb.dev' },
-  { label: 'twitter', href: 'https://twitter.com/Canvinus' },
+  { label: 'twitter', href: 'https://twitter.com/canvi_eth' },
   { label: 'telegram', href: 'https://t.me/canvi' },
   {
     label: 'LinkedIn',
