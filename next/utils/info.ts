@@ -29,7 +29,7 @@ const me = {
   education: 'Bachelor of Computer Science - Higher School of Economics',
   skills: {
     langs: 'JavaScript, TypeScript, Rust, C#, C++, Python, SQL',
-    back: 'Express, NestJS, RDBMS, redis, MongoDB',
+    back: 'Express, NestJS, fastapi, RDBMS, redis, MongoDB',
     front: 'Next.js, React',
     web3: 'wagmi, viem, WASM, near-sdk-rs',
     chains: 'EVM, Bittensor, NEAR',
@@ -41,7 +41,7 @@ const projects = [
   {
     title: 'BitMind',
     description: `Deepfake detection platform built on top of Bittensor blockchain that has multiple consumer-facing applications that allows users to detect if media is AI-generated or not.`,
-    stack: 'Bittensor, Python, Rust, Next.js, React, fastapi',
+    stack: 'Bittensor, NestJS, fastapi, docker',
     links: [
       {
         title: 'BitMind',
@@ -67,6 +67,19 @@ const projects = [
         href: 'https://twitter.com/i/communities/1758601184183456077',
       },
     ],
+  },
+  {
+    name: 'NEP-330: Source Metadata',
+    description: `The contract source metadata represents a standardized interface designed to facilitate the auditing and inspection of source code associated with a deployed smart contract. Adoption of this standard remains discretionary; however, it is strongly advocated for developers who maintain an open-source approach to their contracts. This initiative promotes greater accountability and transparency within the ecosystem, encouraging best practices in contract development and deployment.`,
+    img: '/images/projects/near.png',
+    socials: [
+      {
+        network: 'github',
+        url: 'https://github.com/near/neps',
+        label: 'Github',
+      },
+    ],
+    screenshots: [],
   },
   {
     title: 'SourceScan',
