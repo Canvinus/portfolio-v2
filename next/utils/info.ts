@@ -2,12 +2,20 @@ const me = {
   image:
     'https://ipfs.io/ipfs/bafybeiedloskfopzcn4fdeo2huyskf2hmosd6danh4ogbc2bdqihhd3qge/finish_andre.jpeg',
   summary: [
-    `I am a full-stack developer that is building the Web3 space for the better future. My expertise lies in back-end technologies, including NestJS and Express. I have a strong foundation in RDBMS and experience with NoSQL databases. On the front-end, I am proficient in React and Next.js and have worked with various Web3 frameworks, notably wagmi and viem. I possess in-depth knowledge of developing on EVM-chains and the NEAR Protocol. My focus has been on enhancing the developer experience on NEAR, evidenced by my founding of SourceScan. This initiative addresses the issue of WASM reproducibility.`,
+    `I am a backend-focused engineer building scalable infrastructure in the Web3 space. My expertise lies in designing and optimizing backend systems that can handle high traffic and demanding workloads. Currently at BitMind, I'm building and optimizing AI infrastructure on the Bittensor blockchain. I have deep experience with NestJS, Express, fastapi, and various database technologies including RDBMS, MongoDB, and redis. I've developed systems across multiple blockchain ecosystems including EVM, Bittensor, and NEAR. My work focuses on creating robust, scalable solutions that power next-generation decentralized applications.`,
   ],
   workExperience: [
     {
-      location: '2BeBuilt',
-      dates: '02/2023 - Present',
+      location: 'BitMind - Founding Engineer',
+      dates: '06/2024 - Present',
+    },
+    {
+      location: 'NEAR Protocol (SourceScan) - Full-stack Developer',
+      dates: '06/2023 - 09/2024',
+    },
+    {
+      location: '2BeBuilt - Co-Founder',
+      dates: '02/2023',
     },
     {
       location: 'Infostrategic - Dubai, UAE',
@@ -23,13 +31,24 @@ const me = {
     langs: 'JavaScript, TypeScript, Rust, C#, C++, Python, SQL',
     back: 'Express, NestJS, RDBMS, redis, MongoDB',
     front: 'Next.js, React',
-    web3: 'wagmi, viem, BOS, WASM, near-sdk-rs',
-    chains: 'EVM, NEAR, Filecoin',
+    web3: 'wagmi, viem, WASM, near-sdk-rs',
+    chains: 'EVM, Bittensor, NEAR',
     other: 'docker, nginx, git, github actions',
   },
 }
 
 const projects = [
+  {
+    title: 'BitMind',
+    description: `Deepfake detection platform built on top of Bittensor blockchain that has multiple consumer-facing applications that allows users to detect if media is AI-generated or not.`,
+    stack: 'Bittensor, Python, Rust, Next.js, React, fastapi',
+    links: [
+      {
+        title: 'BitMind',
+        href: 'https://bitmind.ai',
+      },
+    ],
+  },
   {
     title: 'buildr.build',
     description: `buildr.build is the directory for everyone passionate about web3. Treat it as accessible to everyone personal advertising platform where you can promote yourself or others, share contact info, and find necessary contacts of other builders.`,
