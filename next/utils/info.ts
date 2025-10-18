@@ -69,17 +69,15 @@ const projects = [
     ],
   },
   {
-    name: 'NEP-330: Source Metadata',
+    title: 'NEP-330: Source Metadata',
     description: `The contract source metadata represents a standardized interface designed to facilitate the auditing and inspection of source code associated with a deployed smart contract. Adoption of this standard remains discretionary; however, it is strongly advocated for developers who maintain an open-source approach to their contracts. This initiative promotes greater accountability and transparency within the ecosystem, encouraging best practices in contract development and deployment.`,
-    img: '/images/projects/near.png',
-    socials: [
+    stack: 'NEAR Protocol, Rust, WASM',
+    links: [
       {
-        network: 'github',
-        url: 'https://github.com/near/neps',
-        label: 'Github',
+        title: 'GitHub',
+        href: 'https://github.com/near/neps',
       },
     ],
-    screenshots: [],
   },
   {
     title: 'SourceScan',
