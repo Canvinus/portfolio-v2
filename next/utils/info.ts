@@ -39,6 +39,62 @@ const me = {
 
 const projects = [
   {
+    title: 'claw2claw',
+    description: `P2P trading platform for OpenClaw AI bots — Uniswap v4 hook order book, ENS bot identity, and LI.FI cross-chain market access.`,
+    stack: 'Next.js 16, Fastify 5, Foundry, Uniswap v4, ENS, LI.FI, Pimlico',
+    links: [
+      {
+        title: 'ETHGlobal',
+        href: 'https://ethglobal.com/showcase/claw2claw-3uxgx',
+      },
+      {
+        title: 'Github',
+        href: 'https://github.com/2bb-dev/claw2claw',
+      },
+    ],
+  },
+  {
+    title: 'TaoFlash',
+    description: `MEV-protected TAO ⇄ Alpha swap relay for Bittensor. Shields transactions from front-running and sandwich attacks via optimal block submission.`,
+    stack: 'Fastify, Polkadot.js, Redis',
+    links: [
+      {
+        title: 'TaoFlash',
+        href: 'https://www.taoflash.com',
+      },
+      {
+        title: 'Docs',
+        href: 'https://docs.taoflash.com',
+      },
+    ],
+  },
+  {
+    title: 'LLMTrade',
+    description: `Non-custodial copy trading for Hyperliquid. Mirror top traders or AI agents (GPT 5.1, Claude 4.5, Gemini 3 Pro) with secure agent wallets and real-time analytics.`,
+    stack: 'Next.js, Hyperliquid SDK, Privy, Radix UI',
+    links: [
+      {
+        title: 'LLMTrade',
+        href: 'https://www.llmtrade.ai',
+      },
+    ],
+  },
+  {
+    title: 'Promo Protocol',
+    description: `Gasless crypto rewards for event attendees on Base. GPS + QR verification, no wallet setup needed. Fund with Apple Pay, Google Pay, or crypto.`,
+    stack: 'Next.js, Alchemy Account Kit, Mantine, Foundry, Prisma',
+    links: [
+      {
+        title: 'Promo Protocol',
+        href: 'https://www.promoprotocol.com',
+      },
+      {
+        title: 'Twitter',
+        href: 'https://twitter.com/promo_protocol',
+      },
+    ],
+  },
+  {
     title: 'BitMind',
     description: `Deepfake detection platform built on top of Bittensor blockchain that has multiple consumer-facing applications that allows users to detect if media is AI-generated or not.`,
     stack: 'Bittensor, NestJS, fastapi, docker',
@@ -225,6 +281,43 @@ const projects = [
 ]
 
 const hacks = [
+  {
+    name: 'ETHGlobal HackMoney 2026',
+    logo: 'https://2bb.dev/hackmoney-2026.png',
+    date: 'January 30 – February 11, 2026',
+    project: 'claw2claw',
+    prizes: [
+      {
+        nomination: '"🥇 HackMoney 2026 Finalist"',
+        sponsor: {
+          name: 'ETHGlobal',
+          logo: 'https://2bb.dev/ethglobal-logo.png',
+        },
+      },
+      {
+        nomination: '"Integrate ENS"',
+        sponsor: {
+          name: 'ENS',
+          logo: 'https://2bb.dev/ens-logo.png',
+        },
+      },
+    ],
+  },
+  {
+    name: 'CDP AI Hackathon',
+    logo: 'https://2bb.dev/cdp-ai-hackathon.png',
+    date: 'February 1 – 2, 2025',
+    project: 'Proof of Authenticity',
+    prizes: [
+      {
+        nomination: '"🏗️ Best Infrastructure Prize"',
+        sponsor: {
+          name: 'CDP',
+          logo: 'https://2bb.dev/coinbase-cdp-logo.png',
+        },
+      },
+    ],
+  },
   {
     name: 'ETHGlobal Paris 2023',
     logo: 'https://storage.googleapis.com/ethglobal-api-production/events%2Fzqd1s%2Flogo%2F1683191744558_paris_2023_square_logo.png',

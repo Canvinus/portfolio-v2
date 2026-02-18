@@ -7,6 +7,7 @@ const nextConfig = {
       'avatars.githubusercontent.com',
       'storage.googleapis.com',
       'pbs.twimg.com',
+      '2bb.dev',
     ],
   },
 }
