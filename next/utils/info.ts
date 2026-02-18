@@ -14,7 +14,7 @@ const me = {
       dates: '06/2023 - 09/2024',
     },
     {
-      location: '2BeBuilt - Co-Founder',
+      location: '2BB - Co-Founder',
       dates: '02/2023',
     },
     {
