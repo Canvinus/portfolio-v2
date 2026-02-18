@@ -11,7 +11,7 @@ export default function Footer() {
       userSelect={'none'}
     >
       <Flex align={'center'} justify={'center'}>
-        <Text textTransform={'uppercase'}>COPYRIGHT © 2025 AGRUZ.DEV</Text>
+        <Text textTransform={'uppercase'}>COPYRIGHT © 2026 AGRUZ.DEV</Text>
       </Flex>
     </Box>
   )
