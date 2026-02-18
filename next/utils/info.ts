@@ -54,12 +54,12 @@ const projects = [
     ],
   },
   {
-    title: 'TaoFlash',
+    title: 'taoflash',
     description: `MEV-protected TAO ⇄ Alpha swap relay for Bittensor. Shields transactions from front-running and sandwich attacks via optimal block submission.`,
     stack: 'Fastify, Polkadot.js, Redis',
     links: [
       {
-        title: 'TaoFlash',
+        title: 'taoflash',
         href: 'https://www.taoflash.com',
       },
       {
